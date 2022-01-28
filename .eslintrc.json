@@ -18,6 +18,11 @@
         "react",
         "@typescript-eslint"
     ],
+    "ignorePatterns": [
+        "node_modules",
+        "build",
+        "package.json"
+    ],
     "settings": {
         "react": {
             "version": "detect"
