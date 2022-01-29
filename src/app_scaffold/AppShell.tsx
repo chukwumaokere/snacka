@@ -18,7 +18,9 @@ function AppShell (props: Props) {
             <AppShellSpacing>
                 <div className="w-full h-full relative">
                     {props.StatusBar ? <StatusBar /> : null}
-                    <div className='w-full h-full pt-8'>{props.children}</div>
+                    <div className='w-full h-full pt-8 flex flex-col flex-grow pb-24'>
+                        {props.children}
+                    </div>
                     {props.BottomNav ? <BottomNav /> : null}
                 </div>
             </AppShellSpacing>
