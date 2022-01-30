@@ -17,11 +17,11 @@ function AppShell (props: Props) {
         <Background>
             <AppShellSpacing>
                 <div className="w-full h-full relative">
-                    {props.StatusBar ? <StatusBar /> : null}
+                    {props.StatusBar && <StatusBar />}
                     <div className='w-full h-full pt-8 flex flex-col flex-grow pb-24'>
                         {props.children}
                     </div>
-                    {props.BottomNav ? <BottomNav /> : null}
+                    {props.BottomNav && <BottomNav />}
                 </div>
             </AppShellSpacing>
         </Background>

@@ -1,4 +1,4 @@
-export const categories: any = {
+export const categoriesConstant: any = {
     'Groceries': 'bg-green-500',
     'Snacks': 'bg-red-700',
     'Restaurants': 'bg-blue-600',
