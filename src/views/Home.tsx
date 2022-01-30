@@ -57,7 +57,7 @@ function Home () {
             </Box>
             <ScrollableBox>
                 {/* eslint-disable-next-line react/jsx-key*/}
-                {React.Children.toArray(storesArray.map((store) => <StoreCard {...store} />))}
+                {React.Children.toArray(storesArray.map((props) => <StoreCard {...props} />))}
             </ScrollableBox>
         </AppShell>
     );
