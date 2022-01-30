@@ -12,13 +12,17 @@ type Props = {
 }
 
 function AppShell (props: Props) {
+    let pardonBottom: string | null = ' pb-4';
+    if (props.BottomNav) {
+        pardonBottom = ' pb-24';
+    }
 
     return (
         <Background>
             <AppShellSpacing>
                 <div className="w-full h-full relative">
                     {props.StatusBar && <StatusBar />}
-                    <div className='w-full h-full pt-8 flex flex-col flex-grow pb-24'>
+                    <div className={`w-full h-full pt-8 flex flex-col flex-grow${pardonBottom}`}>
                         {props.children}
                     </div>
                     {props.BottomNav && <BottomNav />}
