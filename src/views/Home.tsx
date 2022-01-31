@@ -52,7 +52,9 @@ function Home () {
 
     return (
         <AppShell BottomNav StatusBar color="bg-red-500">
-            <Header />
+            <Box className='mt-4'>
+                <Header />
+            </Box>
             <Box className='flex w-full my-4 items-center'>
                 <span className='text-white font-bold'>Categories:&nbsp;</span><CategoryCarousel />
             </Box>

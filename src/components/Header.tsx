@@ -23,7 +23,7 @@ function Header () {
 
 
     return (
-        <div className="bg-white w-full p-4 rounded-lg mt-4">
+        <div className="bg-white w-full p-4 rounded-lg">
             <div className='w-full flex flex-col items-center'>
                 <div className="w-full flex items-center justify-evenly">
                     <select name="ordermethod"

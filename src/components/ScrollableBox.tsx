@@ -6,7 +6,7 @@ type Props = {
 
 function ScrollableBox (props: Props) {
     return (
-        <div className="flex flex-col gap-4 overflow-auto h-full w-full relative">
+        <div className="flex flex-col gap-4 overflow-auto h-full w-full relative py-4">
             {props.children}
         </div>
     );
