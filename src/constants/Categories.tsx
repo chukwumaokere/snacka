@@ -1,4 +1,4 @@
-export const categoriesConstant: any = {
+export const categoriesConstant: Record<string, string> = {
     'Groceries': 'bg-green-500',
     'Snacks': 'bg-red-700',
     'Restaurants': 'bg-blue-600',
