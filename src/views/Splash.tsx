@@ -10,7 +10,7 @@ function Splash () {
     }, 5000);
 
     return (
-        <AppShell>
+        <AppShell color="bg-red-500">
             <p className="text-4xl font-normal text-white flex w-full h-full justify-center items-center">snacka</p>
         </AppShell>
     );

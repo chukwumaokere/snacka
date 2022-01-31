@@ -17,7 +17,7 @@ function StoreCard ({storeName, storeIcon, travelTime, freeDelivery, categories,
     return (
         <div className="bg-white rounded-xl p-4 relative w-full">
             <div className="w-full grid grid-cols-2 gap-4 mb-2">
-                <img className="rounded-md max-h-24 place-self-center" src={storeIcon} />
+                <img className="max-h-24 place-self-center" src={storeIcon} />
                 <div className="">
                     <h2 className="text-xl font-bold">{storeName}</h2>
                     <h3 className="text-sm text-gray-500 mb-4">
