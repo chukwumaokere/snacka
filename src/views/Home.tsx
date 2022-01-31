@@ -49,8 +49,9 @@ function Home () {
     };
 
     const storesArray: Array<Store> = [cvs, dr, target];
+
     return (
-        <AppShell BottomNav StatusBar>
+        <AppShell BottomNav StatusBar color="bg-red-500">
             <Header />
             <Box className='flex w-full my-4 items-center'>
                 <span className='text-white font-bold'>Categories:&nbsp;</span><CategoryCarousel />

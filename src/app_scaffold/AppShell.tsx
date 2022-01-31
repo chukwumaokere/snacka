@@ -9,6 +9,7 @@ type Props = {
     StatusBar?: boolean,
     props?: any,
     children: React.ReactNode,
+    color: string,
 }
 
 function AppShell (props: Props) {
@@ -18,7 +19,7 @@ function AppShell (props: Props) {
     }
 
     return (
-        <Background>
+        <Background color={props.color}>
             <AppShellSpacing>
                 <div className="w-full h-full relative">
                     {props.StatusBar && <StatusBar />}

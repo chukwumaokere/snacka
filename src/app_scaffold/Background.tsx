@@ -2,12 +2,12 @@ import React from 'react';
 
 type Props = {
     children: React.ReactNode,
-    props?: any,
+    color: string,
 }
 
-function Background ({children, ...props}: Props) {
+function Background ({children, color}: Props) {
     return (
-        <div className="w-screen h-screen bg-red-500">
+        <div className={`w-screen h-screen ${color}`}>
             {children}
         </div>
     );
