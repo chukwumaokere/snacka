@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import SearchBar from './SearchBar';
 import Box from '../components/Box';
-import AddressIcon from './AddressIcon';
+import AddressIcon from '../icons/AddressIcon';
 
 enum orderMethods {
     DELIVERY = 'Delivery',
