@@ -3,7 +3,7 @@ import PillButton from './PillButton';
 import { categoriesConstant } from '../constants/Categories';
 
 function CategoryCarousel () {
-    const [selectedCateogries, setSelectedCategories] = useState([]);
+    const [selectedCateogries, setSelectedCategories] = useState<Array<string>>([]);
 
     return (
         <div className="w-full flex overflow-auto gap-2">

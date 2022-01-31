@@ -9,7 +9,7 @@ type Props = {
 function PillButton (props: Props) {
     const outline = props.outline ? 'border-2 border-white ' : '';
 
-    const onClick = useCallback(() => {
+    const onClick = useCallback((): void => {
         console.log('Clicked', props.text);
     }, []);
 

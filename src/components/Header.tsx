@@ -16,7 +16,7 @@ function Header () {
     const [address, setAddress] = useState('1707 N Ruble St, Chicago, IL 60616');
     const orderMethodsList = orderMethods;
 
-    const onChangeOrderMethod = useCallback(() => (event: React.ChangeEvent) => {
+    const onChangeOrderMethod = useCallback(() => (event: React.ChangeEvent): void => {
         const method: orderMethodType = orderMethod === 'DELIVERY' ? 'PICKUP' : 'DELIVERY';
         setOrderMethod(method);
     }, [orderMethod]);
