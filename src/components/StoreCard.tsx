@@ -6,7 +6,7 @@ import { categoriesConstant } from '../constants/Categories';
 function StoreCard ({storeName, storeIcon, travelTime, freeDelivery, categories, ...otherProps}: Store) {
     let deliveryPrice: string | null = null;
 
-    if(!freeDelivery && otherProps) {
+    if (!freeDelivery && otherProps) {
         //deliveryPrice exists if freeDelivery is false, check Type Store. otherProps has it.
         console.log('check otherProps', otherProps);
         deliveryPrice = otherProps?.deliveryPrice && new Intl.NumberFormat('en-US',
