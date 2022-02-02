@@ -19,6 +19,7 @@
         "@typescript-eslint"
     ],
     "ignorePatterns": [
+        "dist",
         "node_modules",
         "build",
         "package.json"
@@ -40,7 +41,10 @@
             "1tbs"
         ],
         "camelcase": [
-            "error"
+            "error",
+            {
+                "properties": "never"
+            }
         ],
         "comma-dangle": [
             "error",
@@ -112,7 +116,14 @@
                 "avoidEscape": true
             }
         ],
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+        "react/jsx-filename-extension": [
+            1, 
+            { 
+                "extensions": [
+                    ".js", ".jsx", ".tsx"
+                    ] 
+            }
+        ],
         "react/jsx-no-bind": [
             "error",
             {
