@@ -56,7 +56,7 @@ function Home () {
                 <Header />
             </Box>
             <Box className='flex w-full my-4 items-center'>
-                <span className='text-white font-bold'>Categories:&nbsp;</span><CategoryCarousel />
+                <CategoryCarousel />
             </Box>
             <ScrollableBox>
                 {/* eslint-disable-next-line react/jsx-key*/}

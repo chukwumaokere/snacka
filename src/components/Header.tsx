@@ -40,7 +40,7 @@ function Header () {
                 </div>
             </div>
             <Box className='w-full p-4'>
-                <SearchBar placeholder='Find snacks...' />
+                <SearchBar placeholder='Find snacks, stores or items...' />
             </Box>
         </div>
     );
