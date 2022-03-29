@@ -1,17 +1,20 @@
 import React from 'react';
 import DisplayPill from './DisplayPill';
-import { Store } from '../views/Home';
+import { Store, FreeDelivery, PaidDelivery } from '../views/Home';
 import { categoriesConstant } from '../constants/Categories';
 
-function StoreCard ({storeName, storeIcon, travelTime, freeDelivery, categories, ...otherProps}: Store) {
+function StoreCard (props: Store) {
+    const { storeName, storeIcon, travelTime, freeDelivery, categories } = props;
     let deliveryPrice: string | null = null;
 
-    if (!freeDelivery && otherProps) {
-        //deliveryPrice exists if freeDelivery is false, check Type Store. otherProps has it.
-        console.log('check otherProps', otherProps);
-        deliveryPrice = otherProps?.deliveryPrice && new Intl.NumberFormat('en-US',
+    function isPaidDelivery (store: Store): store is PaidDelivery {
+        return store.type === 'paiddelivery';
+    }
+
+    if (isPaidDelivery(props)) {
+        deliveryPrice = props.deliveryPrice ? new Intl.NumberFormat('en-US',
             { style: 'currency', currency: 'USD' })
-            .format(otherProps?.deliveryPrice);
+            .format(props?.deliveryPrice) : null;
     };
 
     return (

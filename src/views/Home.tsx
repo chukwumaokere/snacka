@@ -6,23 +6,30 @@ import Box from '../components/Box';
 import StoreCard from '../components/StoreCard';
 import ScrollableBox from '../components/ScrollableBox';
 
-type Store = {
-    storeName: string,
-    storeIcon: string,
-    travelTime: Array<number>,
-    freeDelivery: true,
-    categories: Array<string>
-} | {
+export interface PaidDelivery {
+    type: 'paiddelivery',
     storeName: string,
     storeIcon: string,
     travelTime: Array<number>,
     freeDelivery: false,
     deliveryPrice: number,
     categories: Array<string>
-};
+}
+
+export interface FreeDelivery {
+    type: 'freedelivery',
+    storeName: string,
+    storeIcon: string,
+    travelTime: Array<number>,
+    freeDelivery: true,
+    categories: Array<string>
+}
+
+export type Store = PaidDelivery | FreeDelivery;
 
 function Home () {
     const cvs: Store = {
+        type: 'freedelivery',
         storeName: 'CVS Pharmacy',
         storeIcon: 'https://logos-world.net/wp-content/uploads/2021/08/CVS-Symbol.png',
         travelTime: [20, 30],
@@ -31,6 +38,7 @@ function Home () {
     };
 
     const dr: Store = {
+        type: 'paiddelivery',
         storeName: 'Duane Reade',
         storeIcon: 'https://upload.wikimedia.org/wikipedia/en/0/06/Duane_Reade_Logo.svg',
         travelTime: [30, 40],
@@ -40,6 +48,7 @@ function Home () {
     };
 
     const target: Store = {
+        type: 'freedelivery',
         storeName: 'Target',
         // eslint-disable-next-line max-len
         storeIcon: 'https://e7.pngegg.com/pngimages/156/169/png-clipart-target-logo-target-corporation-logo-target-icon-logo-text-retail.png',
@@ -48,7 +57,7 @@ function Home () {
         categories: ['Groceries', 'Snacks', 'Supplies'],
     };
 
-    const storesArray: Array<Store> = [cvs, dr, target];
+    const storesArray: Store[] = [cvs, dr, target];
 
     return (
         <AppShell BottomNav StatusBar color="bg-red-500">
