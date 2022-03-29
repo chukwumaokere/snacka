@@ -1,6 +1,6 @@
 import React from 'react';
 import DisplayPill from './DisplayPill';
-import { Store, FreeDelivery, PaidDelivery } from '../views/Home';
+import { Store, PaidDelivery } from '../views/Home';
 import { categoriesConstant } from '../constants/Categories';
 
 function StoreCard (props: Store) {

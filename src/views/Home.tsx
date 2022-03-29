@@ -76,5 +76,3 @@ function Home () {
 }
 
 export default Home;
-
-export type { Store };
